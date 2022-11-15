@@ -1,0 +1,15 @@
+name: Archive Repo
+on:
+  issue_comment:
+    types: [ created ]
+jobs:
+  archive-repo:
+    name: Archive Repo
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, '/archive')
+    steps:
+      - name: Archive Repo
+        uses: mtt-slash-cmd-archive@v1.0.0
+        with:
+          admin_token: ${{ secrets.DEVOPS_BOT_PAT }}
+          repo: mtt-working-repo
