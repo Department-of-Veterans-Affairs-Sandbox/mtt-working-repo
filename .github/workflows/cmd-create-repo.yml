@@ -9,7 +9,7 @@ jobs:
     if: contains(github.event.comment.body, '/create-repo')
     steps:
       - name: create Repo
-        uses: Department-of-Veterans-Affairs-Sandbox/mtt-slash-cmd-create-repo@v1.0.8
+        uses: Department-of-Veterans-Affairs-Sandbox/mtt-slash-cmd-create-repo@v1.0.9
         with:
           admin_token: ${{ secrets.DEVOPS_BOT_PAT }}
           repo: mtt-working-repo
