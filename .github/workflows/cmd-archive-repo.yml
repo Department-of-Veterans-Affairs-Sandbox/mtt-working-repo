@@ -9,7 +9,7 @@ jobs:
     if: contains(github.event.comment.body, '/archive')
     steps:
       - name: Archive Repo
-        uses: Department-of-Veterans-Affairs-Sandbox/mtt-slash-cmd-archive@v1.0.0
+        uses: Department-of-Veterans-Affairs-Sandbox/mtt-slash-cmd-archive@v1.0.1
         with:
           admin_token: ${{ secrets.DEVOPS_BOT_PAT }}
           repo: mtt-working-repo
